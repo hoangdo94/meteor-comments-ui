@@ -119,10 +119,12 @@
     {{#if templateIs 'bootstrap' }}
         <div class="media">
             <div class="media-left">
-                {{> avatar userId=userId class="" }}
+              <a href="#">
+                  <img class="media-object" src="{{userVodkarModel userId}}" width="64px">
+              </a>
             </div>
             <div class="media-body comment">
-                <h4 class="media-heading">{{user.displayName}} <small>{{createdAgo}}</small></h4>
+                <h4 class="media-heading">{{userNickname userId}} <small>{{createdAgo}}</small></h4>
                 <div class="content">
                     <p class="comment-content" data-id="{{commentId}}">{{content}}</p>
 
